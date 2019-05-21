@@ -1,0 +1,1 @@
+# Gamsung_writing
