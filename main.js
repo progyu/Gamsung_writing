@@ -1,5 +1,6 @@
 (function () {
-  const btn = document.querySelector('.btn');
+  const btn = document.querySelector('.save');
+  const del = document.querySelector('.delete');
   const getBoard = document.querySelector('.board');
   const tempList = [];
   const topic = ['옛 사진', '먼지', '개성', '과정', '안부', '새벽',
@@ -7,6 +8,12 @@
   let _randomTopic = 0;
 
   const storage_key = 'writeSave';
+  function saveWrite() {
+    // tempList.forEach(function (item) {
+    // });                                                                                                                                                                                               
+    localStorage.setItem(storage_key, JSON.stringify(tempList));
+  }
+
   function loadWrite() {
     let load = localStorage.getItem(storage_key);
     load = JSON.parse(load);
@@ -17,7 +24,7 @@
 
     load.forEach(function (item) {
       console.log(item);
-      getBoard.innerHTML = item.textContent;
+      // getBoard.innerHTML = item.textContent;
 
       tempList[tempList.length] = item;
     });
@@ -51,4 +58,18 @@
     console.log(tempList);
     saveWrite();
   });
+
+
+  del.addEventListener('click', function (e) {
+    // saveWrite();
+    // localStorage.clear();
+    // setTimeout(function () {
+    //   location.reload();
+    // }, 1000);
+  });
+
+  // focus되면 기본 글인 '여기에 글을...'  이 사라짐.
+  // getBoard.addEventListener('focus', function (e) {
+  //   e.target.textContent = '';
+  // });
 }());
