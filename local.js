@@ -16,9 +16,9 @@ function loadWrite() {
 
   load.forEach(function (item) {
     console.log(item);
-    galleryword.innerHTML = `<div class="wrapper">
+    galleryword.innerHTML += `<a href="view.html"><div class="wrapper">
     <div class="photo one">${item.title}</div>
-  </div>`;
+  </div></a>`;
   });
 }
 

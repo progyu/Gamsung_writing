@@ -24,6 +24,8 @@
     load.forEach(function (item) {
       console.log(item);
       getBoard.innerHTML = item.textContent;
+
+      tempList[tempList.length] = item;
     });
   }
 
