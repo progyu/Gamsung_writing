@@ -1,5 +1,5 @@
 (function () {
-  const btn = document.querySelector('.btn');
+  const btn = document.querySelector('.save');
   const getBoard = document.querySelector('.board');
   const tempList = [];
   const topic = ['옛 사진', '먼지', '개성', '과정', '안부', '새벽',
@@ -10,7 +10,7 @@
   function saveWrite() {
     // tempList.forEach(function (item) {
     // });                                                                                                                                                                                               
-    localStorage.setItem(storage_key, JSON.stringify(item));
+    localStorage.setItem(storage_key, JSON.stringify(tempList));
   }
 
   function loadWrite() {
