@@ -69,8 +69,8 @@ a {
 }
 .container {
 	background-image: url("/image/bgimg1.jpg");
-	background-size: 1200px 940px;
-	height: 1200px;
+	background-size: cover;
+	height: 100vh;
 }
 .navigation {
 	position: relative;
@@ -81,7 +81,7 @@ a {
 	width: 45px;
 	float: left;
 }
-.save {
+.saveimg {
 	margin: 0 10px;
 }
 .edit {
