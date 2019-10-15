@@ -58,6 +58,10 @@
     console.log(tempList);
     saveWrite();
   });
+    // focus되면 기본 글인 '여기에 글을...'  이 사라짐.
+  getBoard.addEventListener('focus', function (e) {
+    e.target.textContent = '';
+  });
 
 
   del.addEventListener('click', function (e) {
